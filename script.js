@@ -31,7 +31,7 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
-      clock.innerHTML = 'La cuenta regresiva ha finalizado';
+      clock.innerHTML = 'Mi matrimonio ha comenzado!';
     }
   }
 
