@@ -1,29 +1,65 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <title>Cuenta Regresiva</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="https://www.matrimonios.cl/mobile/assets/img/favicon/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cuenta Regresiva | Matrimonio Stephy & Pedro</title>
+    <style>
+      body {
+        height: 100vh; /* Establece la altura del body en el 100% de la ventana del navegador */
+        margin: 0; /* Elimina el margen predeterminado del body */
+        padding: 0; /* Elimina el relleno predeterminado del body */
+        background-color: #fcf7ed; /* Establece el color de fondo del body en blanco */
+        background: linear-gradient(to bottom, #eab6ad 50%, #fcf7ed 50%); /* Establece un fondo con degradado para la mitad superior */
+      }
+    </style>
   </head>
   <body>
-    <div id="countdown">
-      <div>
-        <span class="days"></span>
-        <div class="smalltext">Días</div>
-      </div>
-      <div>
-        <span class="hours"></span>
-        <div class="smalltext">Horas</div>
-      </div>
-      <div>
-        <span class="minutes"></span>
-        <div class="smalltext">Minutos</div>
-      </div>
-      <div>
-        <span class="seconds"></span>
-        <div class="smalltext">Segundos</div>
+
+    <div class="center__div">
+      <div class="mx-auto card" style="width: 22rem;">
+        <img src="https://cdn0.matrimonios.cl/usr/9/5/5/0/mfb_1830559.jpg?lu=1674822677" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center">Pedro & Stephanie</h5>
+          <div class="card-text">
+            <div class="row">
+              <div class="col-3 first_data" id="days">
+                <span id="days_data"></span> <br>
+                <small><b>días</b></small>
+              </div>
+              <div class="col-3" id="hous">
+                <span id="hours_data"></span> <br>
+                <small><b>horas</b></small>
+              </div>
+              <div class="col-3" id="minutes">
+                <span id="minutes_data"></span> <br>
+                <small><b>minutos</b></small>
+              </div>
+              <div class="col-3 last_data" id="seconds">
+                <span id="seconds_data"></span> <br>
+                <small><b>segundos</b></small>
+              </div>
+            </div>
+          </div>
+          <br>
+          <p class="card-text text-center">
+            Así que no son ya dos, sino una sola carne; por tanto, lo que Dios ha unido, que no lo separe el hombre<br>
+            Mateo 19:6
+          </p>
+        </div>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>

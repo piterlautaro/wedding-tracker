@@ -1,43 +1,31 @@
-function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+// Establecer la fecha y hora del evento
+const eventDate = new Date("March 4, 2023 18:30:00 GMT-0300");
 
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds
-  };
+// Función para actualizar la cuenta regresiva
+function updateCountdown() {
+  // Calcular la diferencia de tiempo entre ahora y el evento
+  const now = new Date().getTime();
+  const timeDiff = eventDate.getTime() - now;
+
+  // Calcular los días, horas, minutos y segundos restantes
+  const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+  // Actualizar el contenido de cada elemento con la cuenta regresiva
+  const daysEl = document.getElementById("days_data");
+  daysEl.innerText = days;
+
+  const hoursEl = document.getElementById("hours_data");
+  hoursEl.innerText = hours;
+
+  const minutesEl = document.getElementById("minutes_data");
+  minutesEl.innerText = minutes;
+
+  const secondsEl = document.getElementById("seconds_data");
+  secondsEl.innerText = seconds;
 }
 
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-  const daysSpan = clock.querySelector('.days');
-  const hoursSpan = clock.querySelector('.hours');
-  const minutesSpan = clock.querySelector('.minutes');
-  const secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    const t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-      clock.innerHTML = 'Mi matrimonio ha comenzado!';
-    }
-  }
-
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
-}
-
-const deadline = new Date('March 04, 2023 18:30:00 GMT-0300');
-initializeClock('countdown', deadline);
+// Actualizar la cuenta regresiva cada segundo
+setInterval(updateCountdown, 1000);
