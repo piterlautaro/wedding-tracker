@@ -1,6 +1,6 @@
 .center__div {
   position: absolute; /* Establece la posición del div como absoluta */
-  top: 40%; /* Mueve el div hacia abajo un 50% de la altura del contenedor padre */
+  top: 47%; /* Mueve el div hacia abajo un 50% de la altura del contenedor padre */
   left: 50%; /* Mueve el div hacia la derecha un 50% de la anchura del contenedor padre */
   transform: translate(-50%, -50%); /* Desplaza el div hacia arriba y hacia la izquierda un 50% de su propio tamaño */
 }
